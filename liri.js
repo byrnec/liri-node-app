@@ -28,6 +28,7 @@ function liriSwitch(action, artist) {
             break;
         case 'do-what-it-says':
             runRandomTxt(artist)
+            break;
         default:
             console.log("liri doesn't recognize that command")
     }
@@ -152,6 +153,6 @@ function runRandomTxt() {
 
         // We will then re-display the content as an array for later use.
         console.log(dataArr);
-
+        runSpotifyRequest(dataArr[1]);
     });
 }
