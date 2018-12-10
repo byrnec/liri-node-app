@@ -1,41 +1,76 @@
 # LIRI-node-app
 
-## Created by Christie Byrne
+### LIRI, the command line node app that takes in parameters and gives you back data. LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 
-LIRI, the command line node app that takes in parameters and gives you back data.
+### Created by Christie Byrne
 
- ## LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
-
-
-<img src="assets/images/readmephoto.png" width="680px" height= "500px" title="screenshot">
+<img src="ss.png" width="670px" height= "230"
+ title="screenshot">
 
 
 ## Purpose of the game
-To retrieve the data that will power this app, you'll need to send requests to the Bands in Town, Spotify and OMDB APIs. You'll find these Node packages crucial.
+To retrieve the data that powers this app, I sent requests to the Bands in Town, Spotify and OMDB APIs. 
 
-
-This will retrieve and manipulate the information entered with Moment.js. 
-
-At the bottom, this website will provide up-to-date information about various trains, namely their arrival times and how many minutes remain until they arrive at their station.
-## Notes
-
-The .env file will be used by the dotenv package to set what are known as environment variables to the global process.env object in node. These are values that are meant to be specific to the computer that node is running on, and since we are gitignoring this file, they won't be pushed to github — keeping our API key information private.
-
-<img src="assets/images/code.png" width="680px" height= "500px" title="screenshot">
 
 <a src= "https://byrnec.github.io/liri-node-app/" target = " "> Try it out here!</a>
 
-## Built With:
-HTML
 
-CSS
+## Getting Started
 
-JavaScript
+- Clone down repo.
+- Run command 'npm install' in Terminal 
+- Run command 'node liri.js' or one of the commands below.
 
-jQuery Library
+#### Bands in Town
+`node liri.js concert-this <insert artist name>`
 
-JSON
+This will show this username's last 20 tweets and when they were created at in your terminal/bash window.
 
-Bootstrap CSS Library
+#### Spotify
+`node liri.js spotify-this-song <insert song title>`
 
-Moment.js
+This will show the following information about the song in your terminal/bash window
+
+- Artist(s)
+- The song's name
+- A preview link of the song from Spotify
+- The album that the song is from
+
+If no song is provided then your program will default to "The Sign" by Ace of Base
+
+#### Movies
+`node liri.js movie-this <insert movie title>`
+
+This will output the following information to your terminal/bash window:
+
+- Title of the movie.
+- Year the movie came out.
+- IMDB Rating of the movie.
+- Country where the movie was produced.
+- Language of the movie.
+- Plot of the movie.
+- Actors in the movie.
+- Rotten Tomatoes Rating.
+- Rotten Tomatoes URL.
+
+If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
+
+#### Do What It Says
+`node liri.js do-what-it-says`
+
+Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
+
+Right now it will run `spotify-this-song` for "I Want it That Way,".
+
+Feel free to change the text in that document to test out the feature for other commands.
+
+
+## Built With
+
+- Sublime Text - Text Editor
+- JavaScript
+- Node.js - Download the latest version of Node https://nodejs.org/en/
+- dotenv package
+- Spotify NPM Package - https://www.npmjs.com/package/spotify
+- Request NPM Package - https://www.npmjs.com/package/request
+- Moment.js
